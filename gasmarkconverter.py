@@ -1,3 +1,7 @@
+# Author: Charles James
+# Date - Submitted: December 6, 2019
+# Organization: Upper Canada College
+
 import tkinter as tk
 from tkinter import ttk
 
@@ -7,16 +11,14 @@ root.minsize(300, 300)
 root.geometry("1000x700")
 
 style = ttk.Style()
-style.configure('TNotebook', tabposition='nw') #'nw' as in compass direction
-# style.configure('lefttab.TNotebook', tabposition='ws')
+style.configure('TNotebook', tabposition='nw') 
 
-# Create your variables to store data that is typed in by the user 
+# Creating the variables 
 number1 = tk.StringVar()
 number2 = tk.StringVar()
 number3 = tk.StringVar()
 
-# Helper Functions
-
+# The formulas and how the result will be presented when the button is pressed 
 def pressBtn1():
     num1 = (number1.get())
     result = (int(num1) * 14) + 121
@@ -45,12 +47,10 @@ def pressBtn6():
 
 planner = ttk.Notebook(root, width=1000, height=650)
 
-# Create the frames of different colours that are 200*200 pixels in dimensions
-
-######################################## Start Frame 1 ###################################
-
 tab1 = tk.Frame(planner, bg='#EFEFEF', width=200, height=200)
 
+# The text that is used at the top of the page
+# Also, the change in font and colour
 label_1 = tk.Label (tab1,
 	text="Gas Mark - is a temepature scale used on gas ovens in the United Kingdom, Ireland and some other Commonwealth countries")
 label_1.config(font=("Courier", 13), bg='#EFEFEF', fg='Orange')
@@ -62,29 +62,26 @@ label_3 = tk.Label(tab1, text = 'Gas Mark')
 label_3.config(font=("Courier", 18), bg='#EFEFEF', fg='Orange')
 label_3.grid(row=5,column=2)
 
-# Here we create a label to tell the user what the answer is
+# The label to tell the user what the answer is
 label2 = tk.Label(tab1, text="Answer is:")
 label2.config(font=("Courier", 14), bg='#EFEFEF', fg='Orange')
 label2.grid(row=7, column=2)
 
-# Here we create a textbox for data entry
-# "number1" will store this information that will be used by the "pressBtn1" helper function
+
 entryNum1 = tk.Entry(tab1, textvariable=number1)
 entryNum1. grid(row=9,column=2)
 
-# Here we create a button
+# Creating the first button
 button1 = tk.Button(tab1, text="Celsius", command = pressBtn1)
 button1.config(font=("Courier", 15), fg='Orange')
 button1.grid(row=10, column=2)
 
-# Here we create another button
+# Creating the second button
 button2 = tk.Button(tab1, text="Fahrenheit", command = pressBtn2)
 button2.config(font=("Courier", 15), fg='Orange')
 button2.grid(row=11, column=2)
 
-######################################## End Frame 1 ###################################
 
-# These frames have not been implemented yet
 tab2 = tk.Frame(planner, bg='#EFEFEF', width=200, height=200)
 label_4 = tk.Label (tab2,
 	text="Celsius - also known as the centrigrade system, is a temepature scale used by the International System of Units")
@@ -140,16 +137,13 @@ button6.config(font=("Courier", 15), fg='Orange')
 button6.grid(row=11,column=2)
 
 
-# Add the tabs/frames to the notebook object called "planner" 
-# Referred to Stack Overflow for assistance
+
 
 planner.add(tab1, text='Gas Marks')
 planner.add(tab2, text='Celsius')
 planner.add(tab3, text='Fahrenheit')
 
 
-# Tabs will be added to the "top" of the "frame"
-#planner.pack(side=tk.TOP)
 planner.grid(row = 0, column = 0)
 
 root.mainloop()

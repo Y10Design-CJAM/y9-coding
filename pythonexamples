@@ -1,0 +1,27 @@
+
+# Python code to demonstrate the working of 
+# choice() and randrange() 
+   
+# importing "random" for random operations 
+import random 
+  
+# using choice() to generate a random number from a  
+# given list of numbers. 
+print ("A random number from list is : ",end="") 
+print (random.choice([1, 4, 8, 10, 3])) 
+
+print("Generate random integer number within a given range in Python ")
+# random.randrange() with two arguments (will not include 1000)
+# to ensure that the number created has 3-digits, I made sure that the range is from 100-1000 (this won't include 1000 so the largest number will be 999)
+print("Random 3-digit number : ", random.randrange(100, 1000))
+
+# random.randrange() with two arguments (will not include 10000)
+# to ensure that the number created has 4-digits, I made sure that the range is from 1000-10000 (this won't include 10000 so the largest number will be 9999)
+print("Random 4-digit number : ", random.randrange(1000, 10000))
+
+# random.randrange() with three arguments (will look at numbers that increase by 5, 
+# but not including 10000)
+# the random number will have 4-digits the same as the statement above, but the third number insures that it increases by 5
+print("Random 4-digit number that is a multiple of 5 : ", random.randrange(1000, 10000, 5))
+
+

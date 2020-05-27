@@ -5,7 +5,7 @@
 <style>
 
 
-input[type=text], input[type=password] {
+input[type=text] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -27,9 +27,6 @@ button {
 button:hover {
   opacity: 0.8;
 }
-
-
-
 .imgcontainer {
   text-align: center;
   margin: 2px 0 12px 0;
@@ -48,24 +45,24 @@ h2 {
   font-size: 26px;
   color: #56A995;
 }
-}
 </style>
 </head>
 <body>
-
+  <!-- This style section is very different when compared to the other ones. The input section at the top is used to control the many features of the entire form, such as the entry box border and all of the spacing. The button feature controls the button at the button with the aesthetic appearance with the background color, text color, and the different spacing. The one below that controls the color that the button changes to when the cursor is placed on top of it. The other features will be discussed with their respective feature. -->
+<!-- The h2 listed below is the title for this page. I changed some of the featues in the style section (font size and color). -->
 <center><h2>Login Form</h2></center>
-
+<!-- Listed below are the different actions and features of the form. In the first line, I use a php page to create all of the different actions. The second line is referencing the imgcontainer in the style section which impacts the layout of the form with the alignment of the text and the creation of the different margins. The third line is the image which is being influenced by the img.lone in the style section where I was able to create the circular look. -->
 <form action="/action_page.php" method="post">
   <div class="imgcontainer">
     <img src="lone.jpg" alt="Lone" class="lone">
   </div>
-
+<!-- This is where I created the entry field. The first line is referencing a feature in the style section that is creating the space between the side of the screen and the entry box and the text. The line below is where I created the text that goes above the entry box. The final line, is the entry box where I define what should be placed inside the box (text) and the text that is faint in the box to tell the user what to enter. -->
   <div class="container">
     <label for="uname"><b>Full Name</b></label>
     <input type="text" placeholder="Enter Full Name" name="uname" required>
 
   
-        
+<!-- This is the button that allows you to continue onto the message forum but it requires you to fell out the box before you can advance -->      
 <button type="submit" formaction="Start.html">Continue</button>
 
   </div>

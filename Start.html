@@ -113,17 +113,25 @@ div.f {
 </style>
 </head>
 <body>
+  <!-- The style section is fairly similar to the other pages but there are a few differences that I will talk about. The parts that I will be talking about are the ones that impact the entry boxes and the button. The entry boxes are controlled by input a and b. In these sections, I start by choosing the location on the page that they should be. Then I decided the size of these boxes. After that I choose the border for the second one I removed the border because I thought that it looks better without any. Then I selected the size of the font that will appear in the boxes. I purposely made the font in the second box smaller then that of the first. -->
+  <!-- This is the button that brings you back to the home page. -->
   <a href="Project3.html"><b><div class="a"><center>Home</center></div></b></a>
+   <!-- The code below is where I created the text next to the link. The div function above is influencing the text by controlling its size, colour, and location.-->
   <div class="b"><b>Link</b></div>
+  <!-- This code creates the box where the link is located. I have changed the height and width of the box and its location -->
   <div class="d"></div>
+  <!-- The main box on this page is from the code below. It was fairly similar to that of the box above except I made it a lot bigger and changed the location a bit -->
   <div class="e"></div>
+  <!-- This is how I made the communicating part. I made two entry fields where you are able to type text into the first one click the button and then it appears in the second field. Here I'm creating the boxes but they are being impacted by the input tags above -->
 <input type="text" id="field1" class="a"><br>
 <input type="text" id="field2" class="b"><br><br>
+<!-- This is the text that appears in the link box. What I have done is created a div functions that allows me to control this text and move it around so that it is within the box -->
 <div class="f"><b>file:///Users/charles.james/Desktop/Start.html</b></div>
+<!-- This is the button that is located on the bottom right corner that brings you to the next page which allows you to completely leave the program -->
 <a href="Thank.html"><b><div class="j"><center>Quit</center></div></b></a>
-
+<!-- This is te button that transfers the text in the first entry field to the second. It is also being impacted by text is the style section. It also also saying that the button does myFunction which is defined lower -->
 <button class="a" onclick="myFunction()">Send</button>
-
+<!-- Here is the script that gets the text from each box. What it does is it says that whatever value is within one of the boxes when myFunction is used (in the button) then the text in the boxes will become equal -->
 <script>
 function myFunction() {
   document.getElementById("field2").value = document.getElementById("field1").value;
